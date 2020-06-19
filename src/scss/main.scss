@@ -29,8 +29,7 @@ body {
   min-height: 100vh;
   width: 100%;
   flex-flow: column;
-  padding: none;
-  position: relative;
+  padding: none; 
   &__header {
     color: #FFFFFF;
     font-size: 55px;
@@ -44,17 +43,24 @@ body {
     font-weight: normal;
     margin: 87px 50px 0;
   }
-  &__glass {
+  &__glass-wrapper {
+    width: 280px;
+    height: 280px;
     margin: 68px 0 48px;
+    position: relative;
+  }
+  &__glass {
+    margin: 0;
   }
   &__counter {
+    width: 88px;
+    height: 98px;
     color: #000000;
     font-size: 112px;
     position: absolute;
-    left: 38.13%;
-    right: 38.4%;
-    top: 39.04%;
-    bottom: 48.89%;
+    top: 114px;
+    left: 96px;
+    
     z-index: 1;
     margin: 0;
     padding: 0;
@@ -76,7 +82,7 @@ body {
       box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     }
     &--remove {
-      width: 184x;
+      width: 184px;
       height: 23px;
       font-size: 14px;
       color: #F5E5E7;
