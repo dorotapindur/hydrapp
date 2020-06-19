@@ -3,6 +3,8 @@
 @import "_variables";
 @import "modules/hello.scss";
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
 html {
   box-sizing: border-box;
 }
@@ -18,16 +20,69 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
 }
 
 .hydrapp {
   display: flex;
   align-items: center;
-  justify-content: center;
   min-height: 100vh;
   width: 100%;
   flex-flow: column;
+  padding: none;
+  position: relative;
+  &__header {
+    color: #FFFFFF;
+    font-size: 55px;
+    line-height: 64px;
+    width: 275px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: normal;
+    margin: 87px 50px 0;
+  }
+  &__glass {
+    margin: 68px 0 48px;
+  }
   &__counter {
     color: #000000;
+    font-size: 112px;
+    position: absolute;
+    left: 38.13%;
+    right: 38.4%;
+    top: 39.04%;
+    bottom: 48.89%;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    line-height: 131px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  &__button {
+    margin-bottom: 37px;
+    &--add {
+      width: 216px;
+      height: 47px;
+      font-size: 18px;
+      color: #000000;
+      border: 0px;
+      border-radius: 4px;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    &--remove {
+      width: 184x;
+      height: 23px;
+      font-size: 14px;
+      color: #F5E5E7;
+      background: none;
+      border: 0px;
+    }
   }
 }
+
