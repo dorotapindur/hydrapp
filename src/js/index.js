@@ -24,7 +24,6 @@ let entry = localStorage.getItem(key);//entry jest stringiem
  if (entry) {
     quantity = JSON.parse(entry);//zamienia string na number
     //increasing counter while loading page
-
     let i = 0;
     const time = setInterval(function() {
         i++;
