@@ -16,11 +16,14 @@ const removeButton = document.querySelector('.remove--js');
 
 let quantity = 0;
 
+const key = new Date().toISOString().slice(0, 10);//key jest stringiem
+console.log(`${key}`);
+
 //checking local storage
-let entry = localStorage.getItem('quantity');
+let entry = localStorage.getItem(key);//entry jest stringiem
  if (entry) {
-     quantity = entry;
-     document.querySelector('.counter--js').innerHTML = quantity;
+     quantity = JSON.parse(entry);//zamienia string na number
+     document.querySelector('.counter--js').innerHTML = `${quantity}`;
      console.log(`ilość szklanek = ${quantity}`);
  }
  else {
@@ -34,7 +37,7 @@ addButton.addEventListener('click', () => {
     quantity = quantity + 1;
     counter.innerHTML = `${quantity}`;
     console.log(`Dodano 1 szklankę. Ilość szklanek = ${quantity}`);
-    localStorage.setItem('quantity', quantity);
+    localStorage.setItem(key, quantity);
 })
 
 removeButton.addEventListener('click', () => {
@@ -42,6 +45,6 @@ removeButton.addEventListener('click', () => {
     quantity = quantity - 1;
     counter.innerHTML = `${quantity}`;
     console.log(`Odjęto 1 szklankę. Ilość szklanek = ${quantity}`);
-    localStorage.setItem('quantity', quantity);
+    localStorage.setItem(key, quantity);
     }
 })
