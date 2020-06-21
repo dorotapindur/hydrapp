@@ -25,14 +25,14 @@ let entry = localStorage.getItem(key);//entry jest stringiem
     quantity = JSON.parse(entry);//zamienia string na number
     //increasing counter while loading page
     let i = 0;
-    const time = setInterval(function() {
-        i++;
+    const time = setInterval(function() {       
         document.querySelector('.counter--js').innerHTML = `${i}`;
         console.log(`licznik: ${i}`);
 
         if (i >= quantity) {
             clearInterval(time);
         }
+        i++;
     }, 50);
 
     console.log(`ilość szklanek = ${quantity}`);

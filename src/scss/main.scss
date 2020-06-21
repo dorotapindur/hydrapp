@@ -50,6 +50,9 @@ body {
     text-align: center;
     font-weight: normal;
     margin: 87px 50px 0;
+    &--statistic {
+      margin-bottom: 68px;
+    }
   }
   &__glass-wrapper {
     width: 280px;
@@ -98,6 +101,9 @@ body {
       color: var(--remove-content);
       background: none;
       border: 0px;
+      &__link {
+        color: var(--water-color);
+      }
     }
   }
 }
