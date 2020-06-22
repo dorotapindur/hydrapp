@@ -18,7 +18,7 @@ const addDate = document.querySelector('.date--js');
 
 let quantity = 0;
 
-const key = new Date().toISOString().slice(0, 10);//key jest stringiem
+const key = new Date().toLocaleString().slice(0, 10);//key jest stringiem
 console.log(`${key}`);
 
 
