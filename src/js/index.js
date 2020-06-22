@@ -26,24 +26,23 @@ console.log(`${key}`);
 //checking local storage
 let entry = localStorage.getItem(key);//entry jest stringiem
  if (entry) {
-    quantity = JSON.parse(entry);//zamienia string na number
+    quantity = parseInt(entry);//zamienia string na number
     //increasing counter while loading page
     let i = 0;
     const time = setInterval(function() {       
         counter.innerHTML = `${i}`;
         console.log(`licznik: ${i}`);
-
         if (i >= quantity) {
             clearInterval(time);
         }
         i++;
     }, 50);
-
     console.log(`ilość szklanek = ${quantity}`);
  }
  else {
     counter.innerHTML = `${quantity}`;
     console.log(`ilość szklanek = ${quantity}`);
+    localStorage.setItem(key, quantity);
  }
 
 if (quantity > 0) {
@@ -55,7 +54,7 @@ if (quantity > 0) {
 //add button
 
 addButton.addEventListener('click', function(e) {
-    quantity = quantity + 1;
+    quantity = quantity + 1;//można zrobić quantity++, wtedy nie trzeba wcześniej zamieniać stringa na number, tylko dzieje się to automatycznie
     counter.innerHTML = `${quantity}`;
     console.log(`Dodano 1 szklankę. Ilość szklanek = ${quantity}`);
     localStorage.setItem(key, quantity);
