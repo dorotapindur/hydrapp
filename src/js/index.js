@@ -14,10 +14,13 @@ const addButton = document.querySelector('.add--js');
 
 const removeButton = document.querySelector('.remove--js');
 
+const addDate = document.querySelector('.date--js');
+
 let quantity = 0;
 
 const key = new Date().toISOString().slice(0, 10);//key jest stringiem
 console.log(`${key}`);
+
 
 
 //checking local storage
@@ -87,3 +90,5 @@ removeButton.addEventListener('click', () => {
         }
     }    
 })
+
+

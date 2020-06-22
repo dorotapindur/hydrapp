@@ -105,6 +105,7 @@ body {
   &__link {
     color: var(--water-color);
     padding-bottom: 40px;
+    text-decoration: none;
     &:visited {
       color: var(--water-color);
     }
