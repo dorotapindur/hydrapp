@@ -19,6 +19,7 @@ let quantity = 0;
 const key = new Date().toISOString().slice(0, 10);//key jest stringiem
 console.log(`${key}`);
 
+
 //checking local storage
 let entry = localStorage.getItem(key);//entry jest stringiem
  if (entry) {
@@ -26,7 +27,7 @@ let entry = localStorage.getItem(key);//entry jest stringiem
     //increasing counter while loading page
     let i = 0;
     const time = setInterval(function() {       
-        document.querySelector('.counter--js').innerHTML = `${i}`;
+        counter.innerHTML = `${i}`;
         console.log(`licznik: ${i}`);
 
         if (i >= quantity) {
@@ -38,7 +39,7 @@ let entry = localStorage.getItem(key);//entry jest stringiem
     console.log(`ilość szklanek = ${quantity}`);
  }
  else {
-    document.querySelector('.counter--js').innerHTML = `${quantity}`;
+    counter.innerHTML = `${quantity}`;
     console.log(`ilość szklanek = ${quantity}`);
  }
 
@@ -46,6 +47,8 @@ if (quantity > 0) {
     let water = document.querySelector('.water--js');
     water.style.setProperty('display', 'block');
 }
+
+
 //add button
 
 addButton.addEventListener('click', function(e) {

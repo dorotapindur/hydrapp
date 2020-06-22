@@ -2,6 +2,8 @@
 
 @import "_variables";
 @import "modules/hello.scss";
+@import "modules/water.scss";
+@import "modules/statistic.scss";
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
@@ -50,9 +52,6 @@ body {
     text-align: center;
     font-weight: normal;
     margin: 87px 50px 0;
-    &--statistic {
-      margin-bottom: 68px;
-    }
   }
   &__glass-wrapper {
     width: 280px;
@@ -101,79 +100,14 @@ body {
       color: var(--remove-content);
       background: none;
       border: 0px;
-      &__link {
-        color: var(--water-color);
-      }
+    }   
+  }
+  &__link {
+    color: var(--water-color);
+    padding-bottom: 40px;
+    &:visited {
+      color: var(--water-color);
     }
   }
 }
-.water {
-  display: none;
-}
 
-.water-animation-add {
-  display: block;
-	animation: water-filling 2s ease-in-out 1;
-}
-
- @keyframes water-filling {
-  0% {
-    transform: scale(0.8, 0);
-    transform-origin: center 93%;
-    opacity: 0;
-    }
-  50% {
-    transform: scale(1, 1);
-    transform-origin: center 93%;
-    opacity: 1;
-    }
-  75% {
-    transform: scale(1, 0.95);
-    transform-origin: center 93%;
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1, 1);
-    transform-origin: center 93%;
-    opacity: 1;
-  }
-}
-
-.water-animation-remove {
-  display: block;
-	animation: water-removing 2s ease-in-out 1;
-}
-
- @keyframes water-removing {
-  0% {
-    transform: scale(1, 1);
-    transform-origin: center 93%;
-    }
-  50% {
-    transform: scale(1, 0.8);
-    transform-origin: center 93%;
-    }
-  100% {
-    transform: scale(1, 1);
-    transform-origin: center 93%;
-    } 
-
-}
-
-.water-animation-disappear {
-  display: block;
-	animation: water-disappearing 2s ease-in 1 forwards;
-}
-
- @keyframes water-disappearing {
-  0% {
-    transform: scale(1, 1);
-    transform-origin: center 93%;
-    opacity: 1;
-    }
-  100% {
-    transform: scale(0.8, 0);
-    transform-origin: center 93%;
-    opacity: 0;
-    }
-}
