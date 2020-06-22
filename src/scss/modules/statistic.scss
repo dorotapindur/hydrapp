@@ -64,3 +64,13 @@
     }
   }
 } 
+.date-column {
+  grid-column: 1;
+    grid-row: 3;
+    display: flex;
+    justify-self: end;
+    margin: 0;
+  &__list {
+    list-style-type: none;
+  }
+}
