@@ -90,4 +90,18 @@ removeButton.addEventListener('click', () => {
     }    
 })
 
+const storageKeys = Object.keys(localStorage);
 
+for (let i=0; i<storageKeys.length; i++) { 
+    if (storageKeys[i] != 'loglevel:webpack-dev-server') {
+    console.log(`klucze local storage: ${storageKeys[i]}`);
+    }
+}   
+
+const storageValues = Object.values(localStorage);
+
+for (let u=0; u<storageValues.length; u++) {
+    if (storageValues[u] != 'INFO') {
+    console.log(`wartości local storage: ${storageValues[u]}`);
+    }
+}
