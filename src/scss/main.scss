@@ -16,6 +16,7 @@ html {
 :root {
   --water-color: #2196F3;
   --background-color: #3767AD;
+  --date-color:  #4979c0;
   --header-color: #FFFFFF;
   --remove-content: #F5E5E7;
   --black-letters: #000000;
@@ -51,10 +52,17 @@ body {
     font-weight: normal;
     margin: 87px 50px 0;
   }
+  &__date {
+    color: var(--date-color);
+    font-size: 20px;
+    margin: 0 auto;
+    padding-top: 5px;
+    font-weight: bold;
+  }
   &__glass-wrapper {
     width: 280px;
     height: 280px;
-    margin: 68px 0 48px;
+    margin: 35px 0 48px;
     position: relative;
   }
   &__glass {
