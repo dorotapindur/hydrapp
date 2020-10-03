@@ -18,9 +18,23 @@ const addDate = document.querySelector('.date--js');
 
 let quantity = 0;
 
-const key = new Date().toLocaleString().slice(0, 10);//key jest stringiem
-console.log(`${key}`);
+// date code from Nathalie Bergeron, https://codepen.io/natalibergeron/pen/yJeOEO 
+var today = new Date();
 
+var day = today.getDate();
+var month = today.getMonth() + 1;
+var year = today.getFullYear();
+
+if (day < 10) {
+  day = '0' + day
+}
+if (month < 10) {
+  month = '0' + month
+}
+
+const key = day + "." + month + "." + year;
+console.log(`${key}`);
+addDate.innerHTML = `${key}`;
 
 
 //checking local storage
