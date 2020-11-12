@@ -6,7 +6,7 @@ registerSW();
 
 /* place your code below */
 
-console.log('HELLO 🚀')
+console.log("Hello, I'm Dora! 🚀")
 
 const counter = document.querySelector('.counter--js');
 

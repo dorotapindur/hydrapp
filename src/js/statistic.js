@@ -9,17 +9,14 @@ registerSW();
 
 const counterElement = document.querySelector('.counter--js');
 const dateListElement = document.querySelector('.list--js');
-
-
 //local storage content put into table
-
 const storageKeys = Object.keys(localStorage);
 const storageValues = Object.values(localStorage);
 
 
 for (let i=0; i<storageKeys.length; i++) { 
     
-    if ((storageKeys[i].indexOf(2020) != -1) || (storageKeys[i].indexOf(2020) != -1)) {
+    if ((storageKeys[i].indexOf(2020) != -1) || (storageKeys[i].indexOf(2021) != -1)) {
         const liItem = document.createElement('li');
         dateListElement.appendChild(liItem);
         liItem.innerHTML = storageKeys[i];
