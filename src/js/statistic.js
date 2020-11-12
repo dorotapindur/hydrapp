@@ -1,3 +1,4 @@
+
 import '../scss/main.scss';
 
 // uncomment the lines below to enable PWA
@@ -15,7 +16,8 @@ const ulElement = document.querySelector('.list--js');
 const storageKeys = Object.keys(localStorage);
 
 for (let i=0; i<storageKeys.length; i++) { 
-    if (storageKeys[i] != 'loglevel:webpack-dev-server') {
+    
+    if (storageKeys[i].indexOf(2020 || 2021) != -1) {
     const liItem = document.createElement('li');
     ulElement.appendChild(liItem);
     liItem.innerHTML = storageKeys[i];
