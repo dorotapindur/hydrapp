@@ -71,10 +71,14 @@
     align-items: start;
     padding: 15px 0;
   }
-  &__link{
-    color: var(--water-color);
-    text-decoration: none;   
+  &__link {
+    color: var(--light-blue);
+    text-decoration: none;
+    cursor: pointer;
     &:visited {
+      color: var(--light-blue);
+    }
+    &:hover {
       color: var(--water-color);
     }
   }

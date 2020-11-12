@@ -27,7 +27,7 @@ for (let i=0; i<storageContent.length; i++) {
     arrayOfObjects.push({day: keyDay, month: keyMonth, year: keyYear, glass: keyGlass});
 }
 
-//sort array of objects by date
+//sort array of objects by date: npm - array-sort
 var arraySort = require('array-sort');
 var sortedStorageContent = arraySort(arrayOfObjects, ['year', 'month', 'day']);
 console.log(sortedStorageContent);
