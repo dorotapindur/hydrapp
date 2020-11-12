@@ -38,7 +38,11 @@ body {
   min-height: 100vh;
   width: 100%;
   flex-flow: column;
-  padding: none; 
+  padding: none;
+  &__header-wrapper {
+    position: relative;
+    padding-top: 87px;
+  } 
   &__header {
     color: var(--header-color);
     font-size: 55px;
@@ -50,19 +54,22 @@ body {
     justify-content: center;
     text-align: center;
     font-weight: normal;
-    margin: 87px 50px 0;
+    margin: 0;
   }
   &__date {
     color: var(--date-color);
-    font-size: 20px;
-    margin: 0 auto;
-    padding-top: 5px;
+    font-size: 17px;
+    margin: 0;
+    padding-top: 0;
     font-weight: bold;
+    position: absolute;
+    top: 100%;
+    left: 31%;
   }
   &__glass-wrapper {
     width: 280px;
     height: 280px;
-    margin: 35px 0 48px;
+    margin: 68px 0 48px;
     position: relative;
   }
   &__glass {
